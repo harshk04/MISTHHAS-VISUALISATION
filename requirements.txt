@@ -1,0 +1,12 @@
+psycopg2
+openai
+configparser
+pandas
+numpy
+plotly
+streamlit
+DateTime
+uuid
+logging
+typing
+configparser

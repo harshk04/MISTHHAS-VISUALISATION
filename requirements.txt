@@ -10,3 +10,4 @@ uuid
 logging
 typing
 configparser
+dotenv

@@ -11,9 +11,9 @@ import uuid
 import pandas as pd
 # Import our updated NL2SsQL processor
 try:
-    from aiven import SmartNL2SQLProcessor
+    from main import SmartNL2SQLProcessor
 except ImportError:
-    st.error("Please ensure 'aiven.py' is in the same directory as this Streamlit app")
+    st.error("Please ensure 'main.py' is in the same directory as this Streamlit app")
     st.stop()
 
 # Configure Strseamlit page

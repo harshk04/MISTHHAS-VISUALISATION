@@ -9,14 +9,18 @@ import plotly.express as px
 from pathlib import Path
 import uuid
 import pandas as pd
-
+# Import our updated NL2SsQL processor
 try:
-    from main import SmartNL2SQLProcessor
-except ImportError:
-    st.error("Please ensure 'main.py' is in the same directory as this Streamlit app")
+    from aiven import SmartNL2SQLProcessor
+except ImportError as e:
+    st.error(f"ImportError: {e}")  # Shows the actual error message
+    st.stop()
+except Exception as e:
+    st.error(f"Unexpected error: {e}")  # For any other kind of error
     st.stop()
 
-# Configures Strseamlit page
+
+# Configure Strseamlit page
 st.set_page_config(
     page_title="Smart Business Data Analytics - Chat Interface",
     page_icon="📊",
@@ -337,7 +341,7 @@ with st.sidebar:
     
     st.markdown("---")
     
-    # Sample quseries
+    # Sample queries
     st.header("💡 Sample Queries")
     sample_queries = [
         "Show total sales by category",

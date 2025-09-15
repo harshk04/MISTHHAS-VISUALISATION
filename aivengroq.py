@@ -1257,7 +1257,7 @@ Generate the corrected SQL query:
         
         try:
             response = self.openai_client.chat.completions.create(
-                model="gpt-5",   # You can change this to gpt-4o or gpt-4-turbo
+                model="gpt-4.5",   # You can change this to gpt-4o or gpt-4-turbo
                 messages=[
                     {"role": "system", "content": "You are an expert SQL debugging assistant that fixes database query errors by analyzing error messages and schema information."},
                     {"role": "user", "content": prompt}

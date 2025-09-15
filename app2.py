@@ -11,7 +11,7 @@ import uuid
 import pandas as pd
 # Import our updated NL2SsQL processor
 try:
-    from aiven import SmartNL2SQLProcessor
+    from aivengroq import SmartNL2SQLProcessor
 except ImportError as e:
     st.error(f"ImportError: {e}")  # Shows the actual error message
     st.stop()

@@ -4,7 +4,11 @@ import logging
 import psycopg2
 from psycopg2.extras import RealDictCursor
 # from openai import OpenAI
+
 from langfuse.openai import OpenAI, AsyncOpenAI, AzureOpenAI, AsyncAzureOpenAI
+from langfuse import Langfuse
+
+
 from typing import Dict, List, Tuple, Optional, Any
 import configparser
 from datetime import datetime

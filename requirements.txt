@@ -11,3 +11,4 @@ logging
 typing
 configparser
 dotenv
+langfuse

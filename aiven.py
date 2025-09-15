@@ -3,7 +3,8 @@ import json
 import logging
 import psycopg2
 from psycopg2.extras import RealDictCursor
-from openai import OpenAI
+# from openai import OpenAI
+from langfuse.openai import OpenAI, AsyncOpenAI, AzureOpenAI, AsyncAzureOpenAI
 from typing import Dict, List, Tuple, Optional, Any
 import configparser
 from datetime import datetime
@@ -27,6 +28,14 @@ import os
 # Load environment variables from .env
 load_dotenv()
 load_dotenv(dotenv_path=".env")
+
+
+langfuse = Langfuse(
+    secret_key="sk-lf-51271289-44d4-465c-b8d5-3ed2f0eee4b4",
+    public_key="pk-lf-c5401245-9ba7-45e1-8767-e18fb080a46e",
+    host="https://cloud.langfuse.com"
+)
+
 
 warnings.filterwarnings('ignore')
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')

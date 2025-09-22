@@ -22,7 +22,7 @@ except Exception as e:
 
 # Configure Strseamlit page
 st.set_page_config(
-    page_title="Smart Business Data Analytics - Chat Interface",
+    page_title="DataInsights: Intelligent Business Query System",
     page_icon="📊",
     layout="wide",
     initial_sidebar_state="expanded"
@@ -273,7 +273,7 @@ def display_chat_history():
     if not session['messages']:
         st.markdown("""
         <div class="welcome-message">
-            <h3>Welcome to Smart Business Analytics!</h3>
+            <h3>Welcome to Data Insights!</h3>
             <p>I'm here to help you analyze your business data. Ask me questions about:</p>
             <ul>
                 <li>📈 Sales trends and performance</li>
@@ -295,14 +295,14 @@ initialize_session_state()
 # Header
 st.markdown("""
 <div class="main-header">
-    <h1>🤖 Smart Business Data Analytics</h1>
-    <p>AI-Powered Chat Interface for Business Intelligence</p>
+    <h1>🤖 Data Insights</h1>
+    <p>AI-Powered Intelligent Business Query System</p>
 </div>
 """, unsafe_allow_html=True)
 
 # Sidebar
 with st.sidebar:
-    st.header("💬 Chat Management")
+    st.header("💬 DataInsights")
     
     # System Status
     processor = get_processor()
@@ -345,11 +345,9 @@ with st.sidebar:
     st.header("💡 Sample Queries")
     sample_queries = [
         "Show total sales by category",
-        "Monthly sales trend for 2024", 
-        "Attendance rate by department",
-        "Revenue analysis by outlet",
-        "Which products are top performers?",
-        "Compare sales across regions"
+        "Monthly sales trend for 2025", 
+        "Attendance rate by department"
+        "Which products are top performers?"
     ]
     
     for query in sample_queries:
@@ -440,7 +438,8 @@ elif submitted and not user_query.strip():
 st.markdown("---")
 st.markdown("""
 <div style="text-align: center; color: #666; font-size: 0.9em;">
-    🤖 Powered by AI • 📊 Smart Analytics • 🔒 Secure Processing<br>
+            Major-1 Project by <br>
+    🤖 Harsh Kumawat • 🤖 Anmol Dhuwalia • 🤖 Atharva Goel<br>
     💡 Tip: You can ask follow-up questions in the same chat or start a new chat for different topics
 </div>
 """, unsafe_allow_html=True)

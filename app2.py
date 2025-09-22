@@ -272,8 +272,33 @@ def display_chat_history():
     
     if not session['messages']:
         st.markdown("""
+        <style>
+        .welcome-message {
+            background-color: #2c2f33; /* Lighter dark gray */
+            color: #f5f5f5; /* Light text */
+            border-left: 4px solid #1f77b4;
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+        }
+    
+        .welcome-message h3 {
+            color: #4da6ff; /* Accent blue for heading */
+            margin-bottom: 1rem;
+        }
+    
+        .welcome-message ul {
+            margin-left: 1rem;
+        }
+    
+        .welcome-message li {
+            margin-bottom: 0.5rem;
+            color: #e0e0e0; /* Softer gray for list text */
+        }
+        </style>
+    
         <div class="welcome-message">
-            <h3>Welcome to Data Insights!</h3>
+            <h3>Welcome to DataInsights!</h3>
             <p>I'm here to help you analyze your business data. Ask me questions about:</p>
             <ul>
                 <li>📈 Sales trends and performance</li>
@@ -285,6 +310,7 @@ def display_chat_history():
             <p><strong>Try asking:</strong> "Show me monthly sales trends" or "Which products are performing best?"</p>
         </div>
         """, unsafe_allow_html=True)
+
     else:
         for message in session['messages']:
             display_chat_message(message)
